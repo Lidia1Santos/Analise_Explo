@@ -73,3 +73,19 @@ e =(np.std(x))
 f = (np.max(x) - np.min(x))
 
 print(a, b, c[0], d, e, f)
+
+
+#HISTOGRAMA
+
+A = [9.2,10.8,10.6,11.1,12.1,9.6,11.2,8.4,12.9,12.1,14.4,11.1,11.1,9.7,8.4,12.3,10.7,12.9,9.1,12.8]
+a = plt.hist(A, 10)
+plt.axvline(np.mean(A), color='b', linestyle='dashed', linewidth=2)
+plt.axvline(np.median(A), color='r', linestyle='dashed', linewidth=2)
+plt.axvline(np.var(A), color='c', linestyle='dashed', linewidth=2)
+plt.axvline(np.std(A), color='m', linestyle='dashed', linewidth=2)
+plt.axvline(np.max(A) - np.min(A), color='g', linestyle='dashed', linewidth=2)
+
+plt.title("Média e Mediana no Histograma")
+plt.xlabel("Valores")
+plt.ylabel("Frequência")
+plt.show()
